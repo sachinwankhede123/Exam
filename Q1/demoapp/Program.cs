@@ -1,30 +1,21 @@
-﻿Console.Write("Enter lower : ");
-int l = int.Parse(Console.ReadLine());
-Console.Write("Enter upper: ");
-int u = int.Parse(Console.ReadLine());
+﻿using name;
+int a = 0;
+int b = int.Parse(args[0]);
+int c = int.Parse(args[1]);
+
+var d = new Computation(b);
 
 
- bool isOdd(int n){
-		if(n%2==0)
-			return false;
-		return true;
-	}
- bool isEven(int n){
-		if(n%2==0)
-			return true;
-		return false;
-	}
- bool isPrime(int n){
-		int count=0;
-		for(int i=2;i<n;++i)
-		{
-			if(n%i==0)
-				count+=1;
+if (c == 0)
+{
+    Console.WriteLine($"The sum of Odd are : {d.GetSumOf(a, b, d.isOdd)}");
+}
 
-			}
-		if(count!=0)
-			return false;
-		else 
-			return true;
-	}
-    
+if (c == 1)
+{
+    Console.WriteLine($"The sum of Odd are : {d.GetSumOf(a, b, d.isEven)}");
+}
+if (c == 2)
+{
+    Console.WriteLine($"The sum of Odd are : {d.GetSumOf(a, b, d.isPrime)}");
+}
